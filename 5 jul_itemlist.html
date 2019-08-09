@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-md-6-auto mx-auto bg-danger p-5 mt-5">
+		<h1 class="text-white text-center">Dinner Decider</h1>
+	<hr>
+	<lable for="">Enter Item Name</lable>
+	<input type="text" class="form-control" id="itemname"/>
+	<div class="mt-3">
+		<button class="btn btn-success" onclick="addItem()">Add Item</button>
+		<button class="btn btn-info float-right" onclick="decideforme()">Decide For Me</button>
+
+
+	</div>
+	<ul class="list-group" id="printval">
+	</ul>
+</div>
+</div>
+</div>
+	<script>
+		let list=[];
+		function addItem(){
+			let itemname = document.getElementById('itemname').value;
+			list.push(itemname);
+			let alldata="";
+			for(m in list){
+				alldata += "<li class='list-group-item'>"+list[m]+"</li>"
+			}
+			document.getElementById('printval').innerHTML = alldata;
+		}
+
+		function decideforme(){
+			if(list.length>0){
+				let random = Math.round(Math.random()*list.length);
+				alert(list[random]);
+			}
+
+			else{
+				alert('Please enter Some item');
+			}
+		}
+		
+	</script>
+
+</body>
+</html>

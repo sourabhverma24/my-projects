@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script>
+			let arr = ['he','she','his','him'];
+			document.write(arr+"<br/>");
+			document.write(arr[1]+"<br/>");
+			document.write(arr.length+"<br/>");
+			for(let i=0; i<arr.length;i++){
+				document.write(arr[i]+"<br/>");
+			}
+
+			for(m in arr){   // for i loop for key of array
+				document.write(m +"<br/>");
+
+			}
+
+			let b = {name:'james',fname:'bond'}; //{}->object(dont have key)
+			for(m in b){
+				document.write(m+"<br/>"); // in this case for in loop use to fetch key of object
+			}
+
+			let obj = ['hello',{data:['harry','poter']}]; //json obj+array  can handle
+
+			for(m in obj){
+				document.write(obj[1]['data'][0] + "<br/>");
+			}
+
+			let val = [{name:'james',fname:'potter'},{name:'bond',fname:'potter'}];
+			document.write(val[1]['name']);
+
+
+		</script>
+
+</body>
+</html>
